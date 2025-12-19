@@ -315,7 +315,6 @@ section:hover h2::after {
   border-radius: var(--radius-lg);
   transition: var(--transition-card);
   overflow: hidden;
-  position: relative;
 }
 
 /* Project Specifics */

@@ -117,7 +117,7 @@ export default function Home() {
             {/* Social Mini Icons */}
             <div className="d-flex gap-4 mt-4 justify-content-center justify-content-md-start social-mini-links">
               <a href="mailto:ashrfahmd413@gmail.com" target="_blank" rel="noopener noreferrer" className="fs-4 social-icon-email"><i className="fa-solid fa-envelope"></i></a>
-              <a href="https://wa.me/01119598746" target="_blank" rel="noopener noreferrer" className="fs-4 social-icon-whatsapp"><i className="fa-brands fa-whatsapp"></i></a>
+              <a href="https://wa.me/201119598746" target="_blank" rel="noopener noreferrer" className="fs-4 social-icon-whatsapp"><i className="fa-brands fa-whatsapp"></i></a>
               <a href="https://github.com/Ashraf20026" target="_blank" rel="noopener noreferrer" className="fs-4 social-icon-github"><i className="fa-brands fa-github"></i></a>
               <a href="https://www.linkedin.com/in/ashraf-ahmed-b8b58b222" target="_blank" rel="noopener noreferrer" className="fs-4 social-icon-linkedin"><i className="fa-brands fa-linkedin"></i></a>
             </div>

@@ -33,7 +33,7 @@ export default function Contact() {
             name: 'WhatsApp',
             icon: 'fa-brands fa-whatsapp',
             color: '#25D366',
-            link: 'https://wa.me/01119598746'
+            link: 'https://wa.me/201119598746'
         },
         {
             name: 'LinkedIn',
