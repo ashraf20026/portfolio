@@ -327,8 +327,8 @@ section:hover h2::after {
 }
 
 .project-card {
-  width: 270px;
-  height: 170px;
+  width: 320px;
+  height: 220px;
   cursor: pointer;
 }
 
@@ -665,4 +665,107 @@ body.light .app-footer {
   background-position: right center;
   transform: scale(1.05);
   box-shadow: 0 0 15px var(--primary-opacity-50);
+}
+
+/* --- Final Fixes: Buttons & Light Mode Dropdown --- */
+
+/* 1. Project Buttons Rehab - Make them look like BUTTONS not links */
+.btn-project {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem !important;
+  /* Adjusted for better fit */
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  /* Force remove underline */
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Add depth/shadow by default */
+}
+
+/* GitHub Button */
+.btn-github {
+  background: linear-gradient(135deg, #2b3137 0%, #24292e 100%);
+  /* Solid gradient background */
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-github:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  background: #000;
+}
+
+/* Demo Button - Gradient "Chic" Style */
+.btn-demo {
+  background: var(--primary-gradient);
+  /* Full gradient bg, not just border */
+  color: #fff !important;
+  border: none;
+}
+
+.btn-demo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.6);
+  filter: brightness(1.1);
+}
+
+/* 2. Mobile Dropdown Fixes (Light Mode) */
+
+/* The Toggler Icon itself - Gradient Color */
+.navbar-toggler {
+  border: 2px solid transparent !important;
+  background-image: linear-gradient(white, white), var(--primary-gradient);
+  /* Gradient border trick */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-toggler i {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  /* Gradient Icon */
+  font-size: 1.8rem;
+}
+
+/* Dropdown Menu Links Visibility */
+body.light .nav-links-container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix Link Colors in Mobile Menu (Light Mode) */
+body.light .nav-links-container .nav-link {
+  color: #333 !important;
+  /* Force dark text */
+  font-weight: 600;
+}
+
+body.light .nav-links-container .nav-link:hover,
+body.light .nav-links-container .nav-link.active {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  /* Gradient text on hover */
+}
+
+/* Social Icons in Mobile Menu (Light Mode) */
+body.light .nav-links-container .fa-brands,
+body.light .nav-links-container .fa-solid {
+  color: #555 !important;
+}
+
+body.light .nav-links-container a:hover .fa-brands,
+body.light .nav-links-container a:hover .fa-solid {
+  color: var(--primary-color) !important;
 }

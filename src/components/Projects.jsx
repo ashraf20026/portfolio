@@ -10,32 +10,36 @@ const projects = [
         img: project1,
         description: "Developed a JavaScript CRUD app with RegEx form validation",
         category: "JavaScript",
-        demo: "https://ashraf20026.github.io/cruds-opiration/"
+        demo: "https://ashraf20026.github.io/cruds-opiration/",
+        github: "https://github.com/ashraf20026/cruds-opiration"
     },
     {
         title: "Calculator",
         img: project2,
         description: "Calculator built with React",
         category: "React + Vite",
-        demo: "https://ashraf20026.github.io/Calculator-App/"
+        demo: "https://ashraf20026.github.io/Calculator-App/",
+        github: "https://github.com/ashraf20026/Calculator-App"
     },
     {
         title: "Portfolio",
         img: project3,
         description: "React & JavaScript & Bootstrap & CSS",
         category: "React + Vite",
-        demo: "#"
+        demo: "#",
+        github: "https://github.com/ashraf20026/portfolio"
     },
     {
         title: "Photo Editor",
         img: project4,
         description: "JavaScript | Responsive App Design",
         category: "JavaScript",
-        demo: "https://ashraf20026.github.io/photo_editor/"
+        demo: "https://ashraf20026.github.io/photo_editor/",
+        github: "https://github.com/ashraf20026/photo_editor"
     },
 ];
 
-const categories = ["All" , "React + Vite", "Next", "JavaScript"];
+const categories = ["All", "React + Vite", "Next", "JavaScript"];
 
 export default function Projects() {
     const [filter, setFilter] = useState("All");
@@ -68,8 +72,15 @@ export default function Projects() {
                             <div className="overlay">
                                 <h3>{p.title}</h3>
                                 <p className="mb-2 text-sm opacity-75">{p.category}</p>
-                                <p>{p.description}</p>
-                                <a href={p.demo} target="_blank" rel="noopener noreferrer" className="btn-demo">Live Demo</a>
+                                <p className="mb-4">{p.description}</p>
+                                <div className="d-flex gap-3">
+                                    <a href={p.github} target="_blank" rel="noopener noreferrer" className="btn-project btn-github">
+                                        <i className="fa-brands fa-github me-2"></i> Code
+                                    </a>
+                                    <a href={p.demo} target="_blank" rel="noopener noreferrer" className="btn-project btn-demo">
+                                        <i className="fa-solid fa-rocket me-2"></i> Demo
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     ))
